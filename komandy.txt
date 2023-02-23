@@ -1,0 +1,25 @@
+apt install screen -y
+screen -S golden
+
+sudo apt update
+sudo apt -y upgrade python3 -V
+sudo apt install -y python3-pip
+sudo apt install -y python3-venv
+mkdir test
+cd test
+python3.8 -m venv my_env
+wget -nc https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt update
+sudo apt install -f ./google-chrome-stable_current_amd64.deb -y
+pip install selenium webdriver-manager
+source my_env/bin/activate
+sudo apt-get install nano
+pip install --upgrade pip
+pip install godel
+pip install godel[data-tools]
+pip install godel[web3]
+pip install langdetect
+pip install importlib-metadata
+pip install selenium
+pip install webdriver-manager
+python bot.py
