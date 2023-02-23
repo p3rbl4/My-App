@@ -22,7 +22,7 @@ cmds=(
     "pip install selenium"
     "pip install webdriver-manager"
     "pip install selenium webdriver-manager"
-    "python /root/newbot.py"
+    "python /root/My-App/bot.py"
 )
 
 # Функция для проверки успешности выполнения предыдущей команды
