@@ -2,7 +2,7 @@
 
 #Env
 MY_IP=$(ip addr show | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
-TOKEN=$(grep $MY_IP "/root/My-App/tokens.txt" | awk '{print $4}')
+TOKEN=$(grep $MY_IP "/root/My-App/tokens.txt" | awk '{print $2}')
 
 # Команды для выполнения
 cmds=(
