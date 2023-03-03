@@ -293,6 +293,6 @@ while True:
             results = requests.get(url_req)
             print(results.json())
 
-        send_msg(f"oshibka проверил {b} троек")
+        send_msg(f"(IPSERVERA) oshibka проверил {b} троек")
         time.sleep(600)
     
