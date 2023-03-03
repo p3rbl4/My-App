@@ -46,7 +46,7 @@ while True:
         yes_irl = [ 'Website', 'Contact URL', "Youtube URL", "Twitter URL", "Angellist URL","Facebook URL","Whitepaper","Reddit URL","YouTube channel","Linkedin URL", "Official Blog", "Instagram","Source Code","Telegram","Discord URL",'Apple App Store Link', 'Google Scholar Author ID', 'Github URL','Spotify Artist ID','Contact URL','Glassdoor ID','Crunchbase URL','Pitchbook URL','Block Explorer URL','Medium']
         while b < 10000 :
             time.sleep(1)
-            JWT_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMHg0RkVDRjhlZThlMEI0NTc4QTQ2NDc4OWM0NjFCODJCNTY1NzRBNjVFIiwicm9sZSI6InVzZXJfcm9sZSIsImF1ZCI6InBvc3RncmFwaGlsZSIsImlhdCI6MTY3NzA1NDc5OH0.EfZL8hNQH1P_Sr3G2thlsvfYUt4czjfPFQLLeEx4r0U'
+            JWT_TOKEN = 'zalupka'
             DAPP_URL = "https://dapp.golden.xyz/graphql"
             goldapi = GoldenAPI(url=DAPP_URL)
             goldapi.set_jwt_token(jwt_token=JWT_TOKEN)
