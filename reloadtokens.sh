@@ -7,8 +7,6 @@ NEWTOKEN=$(head -n2 /root/My-App/tokens.txt | tail -1)
 cmds=(
     "kill -9 $(ps aux | grep bot.py | awk '{print $2}' | head -1)"
     "rm -rf /root/pathfinder/py/mainnet.sqlite"
-    "sed -i 's/'$OLDTOKEN'/'$NEWTOKEN'/g' /root/My-App/bot.py"
-    "sed -i '1d' /root/My-App/tokens.txt"
     "source /root/test/my_env/bin/activate"
     "python /root/My-App/bot.py"
 )
