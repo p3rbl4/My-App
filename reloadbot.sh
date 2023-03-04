@@ -4,27 +4,17 @@
 OLDTOKEN=$(head -n1 /root/My-App/tokens.txt)
 NEWTOKEN=$(head -n2 /root/My-App/tokens.txt | tail -1)
 #Script
-cmds=(
-    "kill -9 $(ps aux | grep bot.py | awk '{print $2}' | head -1)"
-    "rm -rf /root/pathfinder/py/mainnet.sqlite"
-    "source /root/test/my_env/bin/activate"
-    "python /root/My-App/bot.py"
-)
-# Функция для проверки успешности выполнения предыдущей команды
-check_status () {
-    if [ $1 -eq 0 ]; then
-        echo "Предыдущая команда выполнена успешно"
-        sleep 3
-    else
-        echo "Предыдущая команда завершилась с ошибкой, прерываю выполнение скрипта"
-        exit 1
-    fi
-}
+if pgrep -f /root/My-App/bot.py > /dev/null
+then
+   echo "Команда 'bot.py' уже запущена.Выключаю бота..."
+   kill -9 $(ps aux | grep /root/My-App/bot.py | awk '{print $2}' | head -1)
+   rm -rf /root/pathfinder/py/mainnet.sqlite
+   sleep 2
+   source /root/test/my_env/bin/activate
+   python /root/My-App/bot.py
+else
+   echo "'bot.py' не запущен, включаю бота..."
+   source /root/test/my_env/bin/activate
+   python /root/My-App/bot.py
 
-# Перебираем команды и выполняем их
-for cmd in "${cmds[@]}"
-do
-    eval "${cmd}"
-    check_status $?
-done
-
+fi
