@@ -11,6 +11,6 @@ then
    rm -rf /root/pathfinder/py/mainnet.sqlite-wal
 else
    echo "Файл отсутствует"
-
+   rm -rf /root/pathfinder/py/mainnet.sqlite
 fi
 
