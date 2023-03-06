@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if pgrep -f /root/er/bot.py
+if pgrep -f /root/My-App/bot.py
 then
   echo "Процесс bot.py запущен.ЗБС"
   rm -rf /root/pathfinder/py/mainnet.sqlite
@@ -15,5 +15,5 @@ else
   sleep 5
   pip install selenium webdriver-manager
   sleep 5
-  python /root/er/bot.py
+  python /root/My-App/bot.py
 fi
