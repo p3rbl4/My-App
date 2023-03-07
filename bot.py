@@ -315,6 +315,6 @@ while True:
             print('')
         #487711158
     except:
-        #send_msg(f"(IPSERVERA)oshibka проверил {b} троек новые{t}")
+        send_msg(f"(IPSERVERA)oshibka проверил {b} троек новые{t}")
         time.sleep(600)
     
